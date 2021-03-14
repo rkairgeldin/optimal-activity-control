@@ -228,7 +228,7 @@ def print_graph(G, pos, new_folder, t):
     plt.figure()
     plt.clf()
     nx.draw(G, pos=pos, edge_color=colors, labels=labels)
-    plt.savefig(new_folder+"\Simulation_progress at "+str(t)+".png", dpi=300)
+    plt.savefig(new_folder+"/Simulation_progress at "+str(t)+".png", dpi=300)
     plt.close()
 
 def parsing():
@@ -279,7 +279,7 @@ if __name__ == '__main__':
     pos = nx.circular_layout(G)
 
     path = os.getcwd()
-    new_folder = path + '\progress_algorithm_1'
+    new_folder = path + '/progress_algorithm_1'
     if os.path.exists(new_folder):
         shutil.rmtree(new_folder)
         os.makedirs(new_folder)

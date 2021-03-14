@@ -174,7 +174,7 @@ def print_graph(G, pos, new_folder, t, ind):
     plt.figure()
     plt.clf()
     nx.draw(G, pos=pos, edge_color=colors, labels=labels)
-    plt.savefig(new_folder+"\Simulation_progress at iter="+str(t)+"ind="+str(ind)+".png", dpi=300)
+    plt.savefig(new_folder+"/Simulation_progress at iter="+str(t)+"ind="+str(ind)+".png", dpi=300)
     plt.close()
 
 
@@ -311,7 +311,7 @@ def parsing():
 
 def save_folder(text):
     path = os.getcwd()
-    new_folder = path + '\\'+text
+    new_folder = path + '/'+text
     if os.path.exists(new_folder):
         shutil.rmtree(new_folder)
         os.makedirs(new_folder)
@@ -321,9 +321,9 @@ def save_folder(text):
     return new_folder
 
 def record_graph(Gr, graph_folder, t):
-    nx.write_adjlist(Gr, graph_folder + "\DTDG_"+str(t)+"_"+str(0)+".adjlist")
-    #nx.write_edgelist(Gr, graph_folder + "\DTDG_"+str(t)+"_"+str(ind)+".edgelist")
-    f = open(graph_folder+"\DTDG_"+str(t)+"_"+str(ind)+"node_list.txt", "w")
+    nx.write_adjlist(Gr, graph_folder + "/DTDG_"+str(t)+"_"+str(0)+".adjlist")
+    #nx.write_edgelist(Gr, graph_folder + "/DTDG_"+str(t)+"_"+str(ind)+".edgelist")
+    f = open(graph_folder+"/DTDG_"+str(t)+"_"+str(ind)+"node_list.txt", "w")
     for nd in Gr.nodes:
         f.write(str(nd)+' '+Gr.nodes[nd]['state'])
         f.write('\n')
@@ -333,7 +333,7 @@ def graphsPreprocessing(N, folder, G, l, t):
     #G = nx.erdos_renyi_graph(10, 0.1, seed=None, directed=False)
     n = len(G.nodes)
     mapping = {'S':'0', 'C': '1', 'I': '2', 'R': '3'}
-    with open(folder+"\_DTDG_Graph.txt", "a") as f:
+    with open(folder+"/_DTDG_Graph.txt", "a") as f:
         if t==0:
             f.write(str(N)+'\n')
         f.write(str(n)+" "+str(l)+'\n')

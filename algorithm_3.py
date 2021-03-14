@@ -351,7 +351,8 @@ if __name__ == '__main__':
 
     new_folder = save_folder('progress_algorithm_3')
     graph_folder = save_folder('graph_samples_algorithm_3')
-    processed_file_folder = save_folder('processed_data')
+    #processed_file_folder = save_folder('processed_data')
+    processed_file_folder = save_folder('pytorch_structure2vec/graph_classification/data/DTDG')
 
     state_param = {'S': {'sigma_1': 1 / parameters['sigma_1_H'],
                          'sigma_2': 1 / parameters['sigma_2_H']

@@ -8,7 +8,7 @@ from algorithm_3 import save_folder
 if __name__ == '__main__':
     path = os.getcwd()
 
-    with open(path+"/pytorch_structure2vec/graph_classification/data/DTDG/_DTDG_Graph.txt", "r") as f:
+    with open(path+"/pytorch_structure2vec/graph_classification/data/DTDG/DTDG.txt", "r") as f:
         N = int(f.readline())
 
     perm = np.random.permutation(N)

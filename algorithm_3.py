@@ -333,7 +333,7 @@ def graphsPreprocessing(N, folder, G, l, t):
     #G = nx.erdos_renyi_graph(10, 0.1, seed=None, directed=False)
     n = len(G.nodes)
     mapping = {'S':'0', 'C': '1', 'I': '2', 'R': '3'}
-    with open(folder+"/_DTDG_Graph.txt", "a") as f:
+    with open(folder+"/DTDG.txt", "a") as f:
         if t==0:
             f.write(str(N)+'\n')
         f.write(str(n)+" "+str(l)+'\n')
